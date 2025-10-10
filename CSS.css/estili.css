@@ -1,117 +1,153 @@
-body {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #f3f6f8; /* fondo suave */
+body { /*Fondo de la pantalla*/
+  font-family: Verdana, Geneva, Tahoma, sans-serif; /*Tipo de letra*/
+  margin: 0; /*Sin margen*/
+  background-color: #f3f6f8; /* Fondo  color suave */
   line-height: 1.6;
-  color: #334155;
 }
 
-/* ID = selector id solicitado */
-#header {
-  background: #35424a;
-  color: #ffffff;
-  padding: 20px 0;
+#header { /* Primera fase cod*/
+  background: #35424a; /*Color de fonfo*/
+  color: #ffffff; /*Color de letra*/
+  padding: 20px 0; /*Espacio arriba y abajo*/
 }
 
 .av {
-  text-align: center;
-  margin: 0;
-  font-size: 1.1rem;
+  text-align: center;/*Mundo Programacion en el centro*/
+  margin: 0; /*Sin margen*/
 }
 
-/* menú */
+/* Menú (curso Java...) */
 #menu {
-  display: flex;
-  justify-content: center;
-  gap: 32px;
-  list-style: none;
-  padding: 0;
-  margin: 12px 0 0;
-}
-#menu li a {
-  color: white;
-  text-decoration: none;
-  font-size: 16px;
-  font-weight: 600;
+  display: flex; /*Para que esten en una linea los cursos*/
+  justify-content: center; /*Para que este posicionado en el centro*/
+  gap: 32px; /*Espacio entre los elementos del menú*/
+  list-style: none; /*Quitar los puntos de la lista*/
+  margin: 12px 0 0; /*Margen arriba y abajo*/
 }
 
-/* Título principal usando ID */
+/* Título de Bienvenida */
+#id1 {
+  text-align: center;   /* Centrar el texto */
+  margin-top: 40px;     /* Espacio arriba */
+  margin-bottom: 20px;  /* Espacio abajo */
+  color: #1e293b; /* Color del texto */
+  font-size: 1.8rem; /* Tamaño del texto */
+}
+
+/* Párrafo debajo del título */
+#id1 + p {
+  text-align: center;   /* Centrar el texto */
+  max-width: 700px;     /* Ancho máximo para que no sea demasiado ancho */
+  margin: 0 auto 40px auto; /* Centrar y dar espacio abajo */
+  line-height: 1.7;     /* Mejor lectura */
+  color: #334155; /* Color del texto */
+  font-size: 1rem; /* Tamaño del texto */
+}
+
+/*Nuestros Cursos*/
 #titulo-principal {
-  text-align: center;
-  margin: 40px 0; /* CORREGIDO */
-  color: #1e293b;
-  font-size: 2rem;
+  text-align: center; /*Centrar el texto*/
+  margin: 40px 0; /*Margen arriba y abajo*/
+  color: #1e293b; /*Color del texto*/
+  font-size: 2rem; /*Tamaño del texto*/
 }
 
-/* Contenedor de tarjetas (usando class) */
-.cursos-container {
-  display: flex;
-  justify-content: center;
-  gap: 24px;
-  flex-wrap: wrap;
-  padding: 20px;
-  max-width: 1100px;
-  margin: 0 auto;
-  position: relative; /* para poder layer la imagen decorativa detrás */
-  z-index: 2;
+/*Contenedores*/
+.cursos-container { 
+  display: flex; /* Se colocan uno al lado del otro*/
+  justify-content: center; /* Contenedores centrados */
+  gap: 24px; /* Espacio entre contenedores */
+  flex-wrap: wrap; /* Permite que los contenedores se ajusten a la pantalla */
+  max-width: 1100px; /*No puede superar este ancho*/
+  margin: 0 auto; /*Centrar el contenedor*/
 }
 
-/* Tarjeta - class utilizado */
+/* Contenido de los Contenedores */
 .curso-card {
-  background: white;
-  border-radius: 10px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
-  padding: 22px;
-  width: 250px;
-  text-align: center;
-  transition: transform 0.2s ease;
+  background: white; /*Fondo blanco*/
+  border-radius: 10px; /*Bordes redondeados*/
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08); /*Sombra*/
+  padding: 22px; /*Espacio interno*/
+  width: 250px; /*Ancho fijo*/
+  text-align: center; /*Centrar el texto*/
+  transition: transform 0.2s ease; /*Animacion suave al pasar el raton*/
 }
 
+/*Elevar el Contedor, cuando pases el ratón*/
 .curso-card:hover {
-  transform: translateY(-6px);
+  transform: translateY(-5px); /*Elevar la tarjeta al pasar el raton*/
+  cursor: pointer; /*Cambiar el cursor al pasar el raton*/
 }
 
+/*Título de los Contedores*/
 .curso-card h3 {
-  font-size: 1.3rem;
-  margin-bottom: 10px;
-  color: #1e293b;
+  font-size: 1.3rem; /*Tamaño del texto*/
+  margin-bottom: 10px; /*Espacio abajo*/
+  color: #1e293b; /*Color del texto*/
 }
 
-/* pseudoelemento avanzado (requerido) */
+/* Primera Letra en azul*/
 .curso-card p::first-letter {
-  font-size: 1.2rem;
-  font-weight: bold;
-  color: #2563eb;
+  font-size: 1.2rem; /*Tamaño de la primera letra*/
+  font-weight: bold; /*Negrita*/
+  color: #2563eb;  /*Color azul*/
 }
 
+/*Texto dentro de los contenedores*/
 .curso-card p {
-  font-size: 0.95rem;
-  color: #334155;
-  margin-bottom: 18px;
+  font-size: 0.95rem;  /*Tamaño del texto*/
+  color: #334155; /*Color del texto*/
+  margin-bottom: 18px; /*Espacio abajo*/
 }
 
-/* Botón (CORRECCIÓN: añade # al hex) */
+/* Enlace dentro de los contenedores */
 .curso-card a {
-  display: inline-block;
-  padding: 10px 18px;
-  background-color: #3b82f6; /* CORREGIDO: con '#' */
-  color: white;
-  text-decoration: none;
-  border-radius: 6px;
-  transition: background 0.3s;
-  font-weight: bold;
+  display: inline-block; /*Para que se comporte como un botón*/
+  padding: 10px 18px; /*Espacio dentro del botón*/
+  background-color: #3b82f6; /*Color de fondo del botón*/
+  color: white;  /*Color del texto del botón*/
+  text-decoration: none; /*Quitar subrayado*/
+  border-radius: 6px; /*Bordes redondeados*/
+  font-weight: bold; /*Negrita*/
 }
+/*Efecto al pasar el ratón sobre el botón*/
 .curso-card a:hover {
   background-color: #2563eb;
 }
 
-/* nth-of-type: usado correctamente y con selector del contenedor como prefijo */
+/* Borde específico para el contenedor 2 */
 .cursos-container .curso-card:nth-of-type(2) {
-  border: 2px solid #3b82f6;
+  border: 2px solid white; /*Borde blanco*/
 }
 
+/* Color específico para el contenedor 4 */
 .cursos-container .curso-card:nth-of-type(4) {
-  background-color: #f0f9ff; /* CORREGIDO: con '#' */
+  background-color: white; /*Fondo blanco*/
 }
 
+/* Aside de contacto */
+aside {
+  max-width: 700px;      /* Limitar ancho */
+  margin: 40px auto;     /* Centrar horizontalmente y espacio arriba/abajo */
+  padding: 20px;
+  background-color: #f5f5f5; /* Opcional: resalta el bloque */
+  border-radius: 8px;        /* Bordes redondeados */
+  text-align: center;         /* Centrar texto dentro */
+  color: #1e293b;
+}
+
+/*Final de la página*/
+footer {
+  background: #35424a; /*Color de fondo*/
+  color: white; /*Color del texto*/
+  text-align: center; /*Centrar el texto*/
+  padding: 20px; /*Espacio interno*/
+  margin-top: 40px; /*Espacio arriba*/
+  font-size: 0.9rem; /*Tamaño del texto*/
+}
+
+/*Efecto al pasar el ratón sobre los elementos del menú*/
+#menu li:hover {
+  color: white;        /* Cambia el color */
+  font-size: 20px;   /* Aumenta el tamaño de la letra */
+}

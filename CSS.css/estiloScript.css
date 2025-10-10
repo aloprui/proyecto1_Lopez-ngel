@@ -1,107 +1,158 @@
-body{
-    background-color: #f3f6f8; /* fondo suave */
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    margin: 0;
-    padding: 0;
-    line-height: 1.6;
-    color: #334155;
+/* --- Base general --- */
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif; /* Tipo de letra */
+  margin: 0; /* Sin margen */
+  background-color: #f3f6f8; /* fondo suave */
+  line-height: 1.6; /* Mejor lectura */
+  color: #334155; /* Color del texto */
 }
-/*Titulo*/
-header{
-    background: #35424a;
-    color: #ffffff;
-    padding: 20px 0;
-    text-align: center;
+
+/* Curso de Java */
+header {
+  background: #35424a; /* Color de fondo */
+  color: #ffffff; /* Color del texto */
+  padding: 20px 0; /* Espacio arriba y abajo */
+  text-align: center; /* Centrar el contenido */
 }
-/*Contenido titulo*/
-header h1{
-    margin: 0;
-    font-size: 2rem;
+
+/*Contenido Titulo*/
+header h1 {
+  margin: 0; /* Sin margen */
+  font-size: 2rem; /* Tamaño del texto */
 }
-/*Debajo titulo*/
-header nav ul{
-    display: flex;
-    justify-content: center;
-    gap: 32px;
-    list-style: none;
-    padding: 0;
-    margin: 12px 0 0;
+
+/*Volver a pagína principal*/
+header nav ul {
+  display: flex; /* Para que estén en una línea */
+  justify-content: center; /* Centrado */
+  list-style: none; /* Quitar los puntos de la lista */
+  padding: 0; /* Sin padding */
+  margin: 12px 0 0; /* Margen arriba y abajo */
 }
 
 /*Color debajo titulo Vol...*/
-header nav ul li{
-    color: white;
-    font-size: 16px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: color 0.3s;
+header nav ul li {
+  color: white;/* Color del texto */
+  font-size: 16px; /* Tamaño del texto */
+  font-weight: 600; /* Negrita */
+  cursor: pointer; /* Cambia el cursor al pasar por encima */
 }
 
 /*Cuando pulsas el Vol... se convierte en azul*/
-header nav ul li:hover{
-    color: #3b82f6;
+header nav ul li:hover {
+  color: #3b82f6; /* Cambia el color al pasar el ratón */
 }
 
-/*Temario*/
-.temario{
-    max-width: 1100px;
-    margin: 40px auto;
-    padding: 0 20px;
-    text-align: center;
-}
-.temario h3{
-    font-size: 1.8rem;
-    color: #1e293b;
-    margin-bottom: 20px;
-}
-.cards{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-}
-.card{
-    background: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-
+/* Temario tarjetas */
+.temario {
+  max-width: 1100px; /* Ancho máximo */
+  margin: 40px auto; /* Centrado y espacio arriba */
+  padding: 0 20px; /* Espacio interno */
+  text-align: center; /* Centrar el texto */
 }
 
-.card h4{
-    margin-top: 0;
-    color: #1e293b;
+/* Temario del Curso */
+.temario h3 {
+  font-size: 1.8rem; /* Tamaño del texto */
+  color: #1e293b; /* Color del texto */
+  margin-bottom: 20px; /* Espacio abajo */
 }
-.card p{
-    color: #475569;
-    font-size: 14px;
+
+/* Tarjetas de los temas */
+.cards {
+  display: grid; /*Hace que se vuelvan celdas de la cuadrícula.*/
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); /*Estructura de las tarjetas*/
+  gap: 20px; /*Espacio entre las tarjetas*/
+}
+
+/*Estructura de las terjetas*/
+.card {
+  background: white; /*Fondo blanco*/
+  padding: 22px; /*Espacio interno*/
+  border-radius: 10px; /*Bordes redondeados*/
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08); /*Sombra*/
+  text-align: left; /*Texto alineado a la izquierda*/
+}
+
+/*Efecto al pasar el ratón sobre las tarjetas*/
+.card:hover {
+  transform: translateY(-6px);
+}
+
+/*Titulo de las tarjetas*/
+.card h4 {
+  margin-bottom: 10px; /*Espacio abajo*/
+  color: #2563eb; /*Color del texto*/
+}
+
+/*Texto de las tarjetas*/
+.card p {
+  font-size: 0.95rem;/*Tamaño del texto*/
+  color: #475569; /*Color del texto*/
+}
+
+/* Recursos Adicionales */
+article {
+  max-width: 900px; /* Ancho máximo */
+  margin: 40px auto; /* Centrado y espacio arriba */
+  padding: 20px;  /* Espacio interno */
+  background: white;  /* Fondo blanco */
+  border-radius: 10px; /* Bordes redondeados */
+  box-shadow: 0 6px 16px rgba(0,0,0,0.05);  /* Sombra */
+}
+
+/* Título del artículo */
+article h3 {
+  font-size: 1.5rem; /* Tamaño del texto */
+  margin-bottom: 12px; /* Espacio abajo */
+  color: #1e293b; /* Color del texto */
+}
+
+/* Lista de recursos */
+article ul {
+  list-style: none; /* Quitar los puntos de la lista */
+  padding: 0; /* Sin padding */
+}
+
+/* Elementos de la lista */
+article ul li {
+  margin-bottom: 10px;/* Espacio abajo */
+}
+
+/* Enlaces de los recursos */
+article ul li a {
+  color: #396bd6; /* Color del texto */
+  text-decoration: none; /* Quitar subrayado */
+  font-weight: 600;  /* Negrita */
+}
+
+/*Efecto al pasar el ratón sobre los enlaces*/
+article ul li a:hover {
+  color: #0d3093; /* Cambia el color */
+}
+
+/* Contacto */
+aside {
+  max-width: 900px; /* Ancho máximo */
+  margin: 20px auto; /* Centrado y espacio arriba */
+  padding: 20px;  /* Espacio interno */
+  background: #f0f9ff; /* Fondo azul claro */
+  border-left: 6px solid #3b82f6; /* Borde izquierdo azul */
+  border-radius: 6px; /* Bordes redondeados */
+}
+
+/* Título del aside */
+aside h3 {
+  margin-top: 0;/* Sin margen arriba */
+  color: #1e40af; /* Color del texto */
 }
 
 /* Footer */
-footer{
-    background: #35424a;
-    color: white;
-    text-align: center;
-    padding: 10px 0;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-}
-footer p{
-    margin: 0;
-    font-size: 14px;
-}
-
-/* Recursos (article) */
-article{
-    max-width: 900px;
-    margin: 40px auto;
-    padding: 20px;
-    background: white;
-    border-radius: 10px;
-    box-shadow: 0 6px 16px rgba(0,0,0,0.05);
-}
-article h3{
-    font-size: 1.5rem;
-    margin-bottom: 12px;
-    color: #1e40af;
+footer {
+  background: #35424a; /* Color de fondo */
+  color: white; /* Color del texto */
+  text-align: center; /* Centrar el texto */
+  padding: 20px; /* Espacio interno */
+  margin-top: 40px; /* Espacio arriba */
+  font-size: 0.9rem; /* Tamaño del texto */
 }
